@@ -1,0 +1,15 @@
+<app-comp-atributos> </app-comp-atributos>
+
+<h1>The app that will change all my life</h1>
+
+
+<app-title> </app-title>
+
+<app-card *ngIf="isAliveCard; else anotherCard"></app-card>
+<app-check-sample *ngIf="isAliveCheckSample"> </app-check-sample>
+
+<ng-template #anotherCard>
+	<p>Ola eu sou um card secreto!</p>
+</ng-template>
+<button (click)="disposeCheckSample()"> Destruir </button>
+<router-outlet></router-outlet>
